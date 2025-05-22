@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+
+  <% if (error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <form id="form-login" action="/auth/login" method="POST">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" required>
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p>Não possui uma conta?
+    <button onclick="window.location.href='/register.html'">Cadastre-se</button>
+  </p>
+
+  <p>Esqueceu sua senha?
+    <button onclick="window.location.href='/recuperar-senha.html'">Recuperar senha</button>
+  </p>
+</body>
+</html>
